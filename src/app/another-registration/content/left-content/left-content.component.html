@@ -1,0 +1,103 @@
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="btn-group btn-breadcrumb">
+        <a href="#" class="btn btn-primary ">ნაბიჯი 1: მონაცემები</a>
+        <a href="#" class="btn btn-default">ნაბიჯი 2: დადასტურება</a>
+        <a href="#" class="btn btn-default">ნაბიჯი 3: დეტალები</a>
+      </div>
+    </div>
+  </div>
+  <form #authForm="ngForm">
+    <div class="row">
+      <div class="col-md-5">
+        <p>პირადი ნომერი</p>
+      </div>
+      <div class="col-md-7">
+        <div class="form-group">
+          <input
+            type="text"
+            id="id"
+            class="form-control"
+            #user='ngModel'
+            ngModel
+            name="id"
+            minlength="6"
+            required
+            placeholder="მომხმარებელი"
+          />
+          <label for="id">მიუთითე პირადინ ან პასპორტის ნომერი</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <p>მობილურის ნომერი</p>
+      </div>
+      <div class="col-md-7">
+        <div class="form-group">
+          <input
+            type="text"
+            id="tel"
+            class="form-control"
+            #tel='ngModel'
+            ngModel
+            name="tel"
+            minlength="9"
+            required
+            placeholder="ტელეფონი"
+          />
+          <label for="tel">
+            მაგ: 557384858 ან +995 332 322334 მობილურის ნომერი უნდა იყოს რეგისტრირებული ბანკში
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <p>აქტივაციის ტიპი</p>
+      </div>
+      <div class="col-md-7">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
+          <label class="custom-control-label" for="customControlValidation2">ბარათის ნომერი
+            <i class="fa fa-info-circle" placement="top"
+               ngbTooltip="ბარათის ნომერით რეგისტრირებისთვის სავალდებულოა ..."></i>
+          </label>
+        </div>
+        <div class="custom-control custom-radio mb-3">
+          <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
+          <label class="custom-control-label" for="customControlValidation3">
+            ელ. ფოსტა
+            <i class="fa fa-info-circle" placement="top" ngbTooltip="ელ. ფოსტით რეგისტრირებისთვის სავალდებულოა ..."></i>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-7 offset-md-5">
+        <i class="fa fa-info-circle icon"></i>
+        <p class="p">
+          პირადი ნომერი ან მობილურის ნომერი. გთხოვთ ყურადღებით შეიყვანოთ მონაცემები.
+          პირადი ნომერი და მობილურის ნომერი დარეგისტრირებული უნდა იყოს ტიბისი ბანკში
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="actions">
+        <button class="btn btn-link">
+          <i class="btn fa fa-angle-left fa-lg return-icon"
+             aria-hidden="true">
+
+          </i>
+          <p style="display: inline-block">რეგისტრაციის შეწყვეტა</p>
+        </button>
+        <button class="btn btn-primary submit"
+                type="submit"
+                [disabled]="!authForm.valid">
+          შემდეგი
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

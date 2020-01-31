@@ -1,0 +1,39 @@
+.image {
+  width: 100%;
+}
+
+.info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+.description > p {
+  margin: 0;
+}
+
+.btn-outline-primary {
+  color: #2d2d2d;
+  border-color: rgba(128, 0, 128, 1);
+  box-shadow: 0 0 4px 0 rgba(128, 0, 128, .5);
+}
+
+.btn-outline-primary:hover {
+  color: white;
+  border-color: rgba(128, 0, 128, .8);
+  background-color: rgba(128, 0, 128, 1);
+}
+
+.action {
+  margin-top: 25px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+

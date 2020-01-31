@@ -50,6 +50,7 @@
 }
 
 .action {
+  color: black;
   position: absolute;
   right: 18px;
 }
