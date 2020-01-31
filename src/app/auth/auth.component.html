@@ -1,0 +1,67 @@
+<div class="container-fluid bg">
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="page-title">სატრანსპორტო საშუალებების მართვის საინფორმაციო სისტემა</h4>
+    </div>
+  </div>
+  <div *ngIf="!info" class="row auth">
+    <div class="col-xs-12 col-md-4 offset-md-4">
+      <form class="row margined" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+        <div class="form-group col-md-12">
+          <input
+            type="text"
+            id="user"
+            class="form-control"
+            #user='ngModel'
+            minlength="6"
+            ngModel
+            name="user"
+            minlength="6"
+            required
+            placeholder="შეიყვანეთ მომხმარებელი"
+          />
+        </div>
+        <div class="form-group col-md-12">
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            ngModel
+            name="password"
+            required
+            placeholder="შეიყვანეთ პაროლი"
+          />
+        </div>
+        <div class="form-group col-md-12">
+          <div class="custom-control custom-checkbox mr-sm-2">
+            <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+            <label class="custom-control-label" for="customControlAutosizing">დამახსოვრება</label>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div (click)="change()" class="recovery smallLink">
+            <p>
+              მომხმარებლის/პაროლის აღდგენა
+            </p>
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <button class="btn btn-primary registration-button"
+                  type="submit"
+                  [disabled]="!authForm.valid">
+            ავტორიზაცია
+          </button>
+        </div>
+      </form>
+      <div>
+        <a [routerLink]="'/'" class="recovery centered">
+          <h4>რეგისტრაცია</h4>
+        </a>
+      </div>
+    </div>
+  </div>
+  <app-auth-options *ngIf="info" (sendInfo)="change()"></app-auth-options>
+  <div class="smallDevices">
+    <app-footer-of-registration></app-footer-of-registration>
+  </div>
+</div>

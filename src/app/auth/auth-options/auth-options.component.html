@@ -1,0 +1,13 @@
+<div class="container margined">
+  <div class="col-cm-12 col-md-4">
+    <i class="btn fa fa-angle-left fa-lg return-icon" (click)="returnOnAuth()" aria-hidden="true"></i>
+  </div>
+  <div *ngFor="let option of options" class="row">
+    <div class="col-cm-12 col-md-4 element">
+      <p class="p">{{option.name}}</p>
+      <a [href]="option.address" [download]="option.name">
+        <i class="fa fa-arrow-circle-down	fa-lg" style="color: white" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</div>

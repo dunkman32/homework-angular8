@@ -1,0 +1,30 @@
+.border-right {
+  /*width: max-content;*/
+  /*height: 100%;*/
+  background-color: white !important;
+  height: 100%;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .border-right {
+    text-align: center;
+    box-shadow: 0px 0px 3px 0px #c6c6c6;
+  }
+}
+
+.list-group-flush > a {
+  padding: 3px;
+  background-color: white !important;
+}
+.list-group-flush > a:hover {
+  padding: 7px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: .4s;
+  background-color: rgba(92, 145, 255, 0.22) !important;
+}
+
+.list-group-flush {
+  background-color: white !important;
+}

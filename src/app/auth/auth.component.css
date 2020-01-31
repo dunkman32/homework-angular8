@@ -1,0 +1,62 @@
+.bg {
+  /* The image used */
+  background-image: url("../../assets/backgrounds/bg2.jpg");
+
+  /* Full height */
+  min-height: 100vh;
+  /* Center and scale the image nicely */
+  /*background-position: center;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.auth {
+  font-size: 18px;
+  color: #ffffff;
+  text-align: left;
+  margin-top: 100px;
+}
+
+.page-title {
+  margin: 15px 0 0 2.5%;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.recovery {
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  color: white;
+}
+
+.centered {
+  text-align: center;
+}
+
+.registration-button {
+  width: 100%;
+  background-color: #20801d;
+  padding: 5px 10px;
+}
+
+.smallLink {
+  margin: 0;
+  font-size: 12px;
+}
+
+.smallDevices {
+}
+
+input.ng-dirty.ng-invalid {
+  border: 1.5px solid red;
+  background-color: #ffb2b0;
+}
+
+@media screen and (max-width: 767px) {
+  .smallDevices {
+    position: absolute;
+    width: 94%;
+    bottom: 10px;
+  }
+}

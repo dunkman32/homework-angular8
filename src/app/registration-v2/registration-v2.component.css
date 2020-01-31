@@ -1,0 +1,121 @@
+.bg {
+  /* The image used */
+  background-image: url("../../assets/backgrounds/bg2.jpg");
+
+  /* Full height */
+  min-height: 100vh;
+  /* Center and scale the image nicely */
+  /*background-position: center;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.registration-title {
+  font-size: 18px;
+  color: #ffffff;
+  text-align: left;
+  margin: 100px 0 20px 120px;
+}
+
+.page-title {
+  margin: 15px 0 0 2.5%;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.form-group > label {
+  font-style: italic;
+  font-size: 12px;
+  color: #ffffff;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.col-md-5 > div {
+  height: 60px;
+}
+
+.with-alert-labels {
+}
+
+
+.alert-labels {
+  cursor: pointer;
+  padding: 7px 10px;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.alert-labels-danger {
+  background-color: red;
+}
+
+.alert-labels-success {
+  background-color: #20801d;
+}
+
+.action-area {
+  margin-top: 60px;
+}
+
+.registration-button {
+  width: 100%;
+  background-color: #20801d;
+  padding: 5px 10px;
+}
+
+
+#registration-terms-area {
+  /*margin: 20px auto 10px;*/
+  margin-top: 20px;
+}
+
+#registration-terms {
+  text-decoration: underline;
+  /*margin: 20px auto 10px;*/
+  color: white;
+  text-align: center;
+}
+
+#registration-terms p:hover {
+  color: aqua;
+  font-weight: bold;
+}
+
+input.ng-dirty.ng-invalid {
+  border: 1.5px solid red;
+  background-color: #ffb2b0;
+}
+
+input.ng-dirty.ng-valid {
+  border-color: green;
+}
+
+
+@media screen and (max-width: 767px) {
+
+  .with-alert-labels {
+    height: 100px !important;
+  }
+
+  .alert-labels {
+    margin-top: -15px;
+    padding: 5px 10px;
+    height: auto;
+  }
+
+  .action-area {
+    margin-top: auto;
+  }
+
+  .registration-title {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  #registration-terms {
+    margin: 20px auto;
+  }
+}
+

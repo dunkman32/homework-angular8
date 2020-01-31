@@ -1,0 +1,27 @@
+<div class="main">
+  <div class="itemDiv" *ngFor="let item of personalInformation">
+    <div class="name title">
+      {{item.name}}
+      <i *ngIf="item.icon" placement="top" [ngbTooltip]="item.text"
+         class="btn icon fa-question-circle fa fa-pencil fa-lg" aria-hidden="true"></i>
+    </div>
+    <div class="mainDiv">
+      <div class="item" *ngFor="let info of item.infos">
+        <div class="light-color">{{info.id}}</div>
+        <div>
+          <p *ngIf="!info.switch">{{info.value}}</p>
+          <p *ngIf="info.switch">{{switch ? 'ჩართული' : 'გამორთული'}}</p>
+        </div>
+        <div>
+          <i *ngIf="info.action" placement="top" ngbTooltip="შესწორება"
+             class="btn action light-color fa fa-pencil fa-lg" aria-hidden="true"></i>
+          <div *ngIf="info.switch" placement="top" [ngbTooltip]="switch? 'გამორთე': 'ჩართე'"
+               class="action custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1" [(ngModel)]="switch">
+            <label class="custom-control-label" for="customSwitch1"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

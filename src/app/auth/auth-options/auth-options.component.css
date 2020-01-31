@@ -1,0 +1,27 @@
+.element {
+  display: flex;
+  justify-content: space-between;
+  background-color: #20801d;
+  margin: 10px auto;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.p {
+  color: white;
+  margin: 0;
+}
+
+.margined {
+  margin-top: 100px;
+}
+
+.return-icon {
+  cursor: pointer;
+  position: relative;
+  bottom: 70px;
+  right: 35px;
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+}

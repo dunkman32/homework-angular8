@@ -1,0 +1,126 @@
+<div class="container-fluid bg">
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="page-title">სატრანსპორტო საშუალებების მართვის საინფორმაციო სისტემა</h4>
+    </div>
+  </div>
+  <div class="row">
+    <p class="registration-title">
+      მომხმარებლის რეგისტრაცია
+    </p>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-10 offset-md-1">
+      <form class="row margined" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+        <div class="col-md-5 offset-1">
+          <div class="form-group">
+            <input
+              type="text"
+              id="user"
+              class="form-control"
+              #user='ngModel'
+              ngModel
+              name="user"
+              minlength="6"
+              required
+              placeholder="მომხმარებელი"
+            />
+            <label for="email">არანაკლებ 6 სიმბოლო</label>
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              ngModel
+              name="password"
+              required
+              minlength="6"
+              placeholder="პაროლი"
+            />
+            <label for="email">არანაკლებ 6 სიმბოლო</label>
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              id="confirmPassword"
+              class="form-control"
+              ngModel
+              name="confirmPassword"
+              required
+              minlength="6"
+              placeholder="გაიმეორე პაროლი"
+            />
+          </div>
+        </div>
+        <div class="col-md-5 offset-1">
+          <div class="form-group">
+            <input
+              type="email"
+              id="ID"
+              class="form-control"
+              ngModel
+              name="ID"
+              required
+              placeholder="პირადი ნომერი"
+              minlength="11"
+            />
+          </div>
+          <div class="row with-alert-labels form-group">
+            <div class="col-md-6 col-xs-12">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="telephone"
+                  class="form-control"
+                  ngModel
+                  name="telephone"
+                  required
+                  placeholder="ტელეფონი"
+                  minlength="9"
+                  #telephone='ngModel'
+                />
+              </div>
+            </div>
+            <app-mobile-modal [Input]="telephone.viewModel"></app-mobile-modal>
+          </div>
+          <div class="row with-alert-labels">
+            <div class="col-md-6 col-xs-12">
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  ngModel
+                  name="email"
+                  email
+                  required
+                  placeholder="ელ. ფოსტა"
+                  #mail='ngModel'
+                />
+              </div>
+            </div>
+            <app-email-modal [Input]="mail.viewModel"></app-email-modal>
+          </div>
+          <div class="row action-area" style="display: flex; flex-direction: row-reverse">
+            <div class="col-md-12">
+              <button class="btn btn-success registration-button"
+                      type="submit"
+                      [disabled]="!authForm.valid">
+                რეგისტრაცია
+              </button>
+            </div>
+            <div class="col-md-12" id="registration-terms-area">
+              <a id="registration-terms" [routerLink]="'/pdf'">
+                <p>
+                  რეგისტრაციის პირობები
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <app-footer-of-registration></app-footer-of-registration>
+</div>

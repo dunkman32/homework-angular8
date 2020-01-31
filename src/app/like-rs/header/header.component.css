@@ -1,0 +1,20 @@
+.return-icon {
+  font-weight: bold;
+  font-size: 32px;
+  color: white;
+  position: relative;
+  bottom: 2px;
+  right: 25px;
+  cursor: pointer;
+}
+.badge {
+  background: #21252982;
+  color: white;
+  border-radius: 50%;
+  width: 15px;
+  position: relative;
+  height: 15px;
+  top: -10px;
+  font-size: 11px;
+  right: 23px;
+}

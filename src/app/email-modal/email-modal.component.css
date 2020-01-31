@@ -1,0 +1,39 @@
+.alert-labels {
+  cursor: pointer;
+  padding: 7px 10px;
+  width: 200px;
+  border-radius: 3px;
+  text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .alert-labels-success {
+    margin-top: 5px;
+    width: 100%;
+  }
+}
+
+.alert-labels-danger {
+  background-color: red;
+}
+
+.alert-labels-success {
+  background-color: #20801d;
+}
+
+.submitButton {
+  margin: 20px auto;
+  background-color: #20801d;
+  padding: 5px 10px;
+  width: 100%
+}
+
+.modal-header {
+  background-color: #20801d;
+  color: white;
+}
+
+.margined {
+  display: block;
+  margin: 0 auto
+}

@@ -1,0 +1,42 @@
+.page-footer {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.footer-text {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+
+.image {
+  position: absolute; right: 10px; height: 32px; bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .page-footer {
+    position: initial;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-text {
+    width: 100%;
+    display: block;
+    margin: 25px auto;
+  }
+
+  .image {
+    position: relative;
+    width: 100%;
+  }
+
+}
+
