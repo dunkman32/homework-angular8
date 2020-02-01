@@ -48,6 +48,15 @@
 .smallDevices {
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.auth-button {
+  margin-top: 15px;
+}
+
 input.ng-dirty.ng-invalid {
   border: 1.5px solid red;
   background-color: #ffb2b0;

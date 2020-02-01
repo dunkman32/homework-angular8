@@ -1,7 +1,10 @@
 <div class="container-fluid bg">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 header">
       <h4 class="page-title">სატრანსპორტო საშუალებების მართვის საინფორმაციო სისტემა</h4>
+      <button [routerLink]="'/'" class="btn btn-link auth-button">
+        რეგისტრაცია
+      </button>
     </div>
   </div>
   <div *ngIf="!info" class="row auth">

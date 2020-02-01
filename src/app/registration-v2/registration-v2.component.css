@@ -92,6 +92,14 @@ input.ng-dirty.ng-valid {
   border-color: green;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.auth {
+  margin-top: 15px;
+}
 
 @media screen and (max-width: 767px) {
 

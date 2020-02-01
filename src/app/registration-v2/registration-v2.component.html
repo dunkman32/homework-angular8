@@ -1,7 +1,10 @@
 <div class="container-fluid bg">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 header">
       <h4 class="page-title">სატრანსპორტო საშუალებების მართვის საინფორმაციო სისტემა</h4>
+      <button [routerLink]="'/auth'" class="btn btn-link auth">
+        ავტორიზაცია
+      </button>
     </div>
   </div>
   <div class="row">
@@ -106,6 +109,7 @@
             <div class="col-md-12">
               <button class="btn btn-success registration-button"
                       type="submit"
+                      [routerLink]="'/another-registration'"
                       [disabled]="!authForm.valid">
                 რეგისტრაცია
               </button>

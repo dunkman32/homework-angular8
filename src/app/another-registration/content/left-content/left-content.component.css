@@ -60,7 +60,7 @@ input.ng-dirty.ng-valid {
 /*copied*/
 /** The Magic **/
 .btn-breadcrumb {
-  border: #909090 1px solid;
+  border: #eeeeee 1px solid;
   border-radius: 5px;
   width: 100%;
 }

@@ -3,8 +3,10 @@
     <div class="row">
       <div class="btn-group btn-breadcrumb">
         <a href="#" class="btn btn-primary ">ნაბიჯი 1: მონაცემები</a>
-        <a href="#" class="btn btn-default">ნაბიჯი 2: დადასტურება</a>
-        <a href="#" class="btn btn-default">ნაბიჯი 3: დეტალები</a>
+        <a [routerLink]="'/like-rs'" class="btn btn-default">
+          ნაბიჯი 2: დადასტურება
+        </a>
+        <a [routerLink]="'/like-rs'" class="btn btn-default">ნაბიჯი 3: დეტალები</a>
       </div>
     </div>
   </div>
@@ -85,10 +87,9 @@
     </div>
     <div class="row">
       <div class="actions">
-        <button class="btn btn-link">
+        <button class="btn btn-link" [routerLink]="'/'">
           <i class="btn fa fa-angle-left fa-lg return-icon"
              aria-hidden="true">
-
           </i>
           <p style="display: inline-block">რეგისტრაციის შეწყვეტა</p>
         </button>
