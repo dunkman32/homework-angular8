@@ -1,4 +1,4 @@
-<div class="container-fluid bg">
+<div class="container-fluid bg" *ngIf="!isLoading">
   <div class="row">
     <div class="col-md-12 header">
       <h4 class="page-title">სატრანსპორტო საშუალებების მართვის საინფორმაციო სისტემა</h4>
@@ -12,14 +12,13 @@
       <form class="row margined" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
         <div class="form-group col-md-12">
           <input
-            type="text"
-            id="user"
+            type="email"
+            id="email"
             class="form-control"
             #user='ngModel'
             minlength="6"
             ngModel
-            name="user"
-            minlength="6"
+            name="email"
             required
             placeholder="შეიყვანეთ მომხმარებელი"
           />
@@ -67,4 +66,10 @@
   <div class="smallDevices">
     <app-footer-of-registration></app-footer-of-registration>
   </div>
+</div>
+<div *ngIf="isLoading" style="text-align: center">
+  <app-spinner></app-spinner>
+</div>
+<div class="alert alert-danger" *ngIf="error && error.length">
+  <p>{{error}}</p>
 </div>

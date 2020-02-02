@@ -25,6 +25,8 @@ import { AnotherHeaderComponent } from './another-registration/another-header/an
 import { ContentComponent } from './another-registration/content/content.component';
 import { RightContentComponent } from './another-registration/content/right-content/right-content.component';
 import { LeftContentComponent } from './another-registration/content/left-content/left-content.component';
+import {HttpClientModule} from '@angular/common/http';
+import { SpinnerComponent } from './sheared/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -45,9 +47,11 @@ import { LeftContentComponent } from './another-registration/content/left-conten
     AnotherHeaderComponent,
     ContentComponent,
     RightContentComponent,
-    LeftContentComponent
+    LeftContentComponent,
+    SpinnerComponent
   ],
   imports: [
+    HttpClientModule,
     NgbModule,
     BrowserModule,
     AppRoutingModule,
